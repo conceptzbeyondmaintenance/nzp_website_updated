@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="keywords" content="" />
+      <meta name="author" content="">
+      <meta name="robots" content="" />
+      <meta name="description" content="" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Gallery | National Zoological Park</title>
+      <link rel="shortcut icon" href="assets/images/header/favicon.ico">
+      <!-- Bootstrap CSS -->
+      <link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+      <!-- Slick Slider CSS -->
+      <link rel="stylesheet" type="text/css" href="assets/plugins/slick-carousel/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="assets/plugins/slick-carousel/slick-theme.css"/>
+      <!-- Theme CSS -->
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+   </head>
+   <body>
+      <section class="main-slider inner-page">
+         <div class="page-banner">
+            <div class="slider-item"><img src="assets/images/sliders/partner-with-us/banner1.jpg" alt="Slide 1"></div>
+			<h1 class="page-title">GALLERY</h1>
+         </div>
+         <!-- Left Icons -->
+         <div class="left-icons">
+            <div id="adopt" class="adopt-icon"><img src="assets/images/sliders/home/adopt.svg"></div>
+            <div id="partner-icon" class="partner-icon"><a href="partner-with-us.html"><img src="assets/images/sliders/home/partner.png"></a></div>
+            <div id="ticket-icon" class="ticket-icon"><img src="assets/images/sliders/home/book-tickets.svg"></div>
+            <div id="left-arrow" class="left-arrow"><img src="assets/images/sliders/home/prev.png"></div>
+         </div>
+         <!-- Right Icons -->
+         <div class="right-icons">
+            <div id="live-icon" class="live-icon"><img src="assets/images/sliders/home/live.png"></div>
+            <div id="zoo-icon" class="zoo-icon"><a href="events.html"><img src="assets/images/sliders/home/zoo-events.svg"></a></div>
+            <div class="chat-icon"><img src="assets/images/sliders/home/chat.svg"></div>
+            <div id="right-arrow" class="right-arrow"><img src="assets/images/sliders/home/next.png"></div>
+         </div>
+      </section>
+     
+      <section class="gallery-box">
+         <div class="container">
+            <div class="breadcrub-title">
+               <h3 class="heading text-center">GALLERY</h3>
+               <ul>
+                  <li><a href="#">VISITOR INFORMATION ></a> </li>
+                  <li>GALLERY</li>
+               </ul>
+               <div class="separate-line margin-40"><img src="assets/images/home/separator.png"></div>
+            </div>
+            <div class="gallery">
+               <div class="row g-3" data-masonry='{"percentPosition": true }'>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-1.jpg" alt="Image 1" class="img-fluid" onclick="openLightbox(0)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-2.jpg" alt="Image 2" class="img-fluid" onclick="openLightbox(1)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-3.jpg" alt="Image 3" class="img-fluid" onclick="openLightbox(2)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-4.jpg" alt="Image 4" class="img-fluid" onclick="openLightbox(3)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-5.jpg" alt="Image 5" class="img-fluid" onclick="openLightbox(4)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-6.jpg" alt="Image 5" class="img-fluid" onclick="openLightbox(5)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-7.jpg" alt="Image 5" class="img-fluid" onclick="openLightbox(6)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-8.jpg" alt="Image 5" class="img-fluid" onclick="openLightbox(7)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-9.jpg" alt="Image 5" class="img-fluid" onclick="openLightbox(8)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-10.jpg" alt="Image 5" class="img-fluid" onclick="openLightbox(9)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-11.jpg" alt="Image 5" class="img-fluid" onclick="openLightbox(10)">
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-6">
+                     <img src="assets/images/gallery/gallery-12.jpg" alt="Image 5" class="img-fluid" onclick="openLightbox(11)">
+                  </div>
+               </div>
+            </div>
+            <!-- Lightbox Modal -->
+            <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+               <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <!-- Make modal extra large -->
+                  <div class="modal-content bg-dark text-white">
+                     <div class="modal-body position-relative text-center">
+                        <!-- Close Button -->
+                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                        <!-- Lightbox Image -->
+                        <img id="lightboxImg" src="" class="img-fluid mx-auto d-block" alt="Lightbox Image">
+                        <!-- Navigation Buttons -->
+                        <button class="btn btn-light lightbox-prev" onclick="changeSlide(-1)">&#10094;</button>
+                        <button class="btn btn-light lightbox-next" onclick="changeSlide(1)">&#10095;</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="separate-line mt-5"><img src="assets/images/home/separator.png"></div>
+         </div>
+      </section>
+      <!-- Footer -->
+      <footer>
+         <div class="container">
+            <div class="footer-top">
+               <div class="row">
+                  <div class="col-md-6 col-6">
+                     <div class="footer-logo">
+                        <img src="assets/images/footer/footer-logo.svg">
+                     </div>
+                  </div>
+                  <div class="col-6 d-block d-md-none">
+                     <div class="white-logos">
+                        <img src="assets/images/footer/white-logo-1.svg">
+                        <div class="vertical-line"></div>
+                        <img src="assets/images/footer/white-logo-2.svg">
+                     </div>
+                  </div>
+                  <div class="col-12 d-block d-md-none">
+                     <hr class="mobile-footer-separator">
+                  </div>
+                  <div class="col-md-6 col-12 align-content-center">
+                     <div class="footer-action">
+                        <div class="register"><span>Register for </span>latest NZP News | Events</div>
+                        <div class="subscribe">
+                           <a href="#">
+                           <img class="d-none d-md-block" src="assets/images/footer/subscribe.svg">
+                           <img class="d-block d-md-none" src="assets/images/footer/subscribe-yellow.png">
+                           </a>
+                        </div>
+                        <div class="reach-us">
+                           <a href="contact-us.html">
+                           <img class="d-none d-md-block" src="assets/images/footer/reach-us.svg">
+                           <img class="d-block d-md-none" src="assets/images/footer/reach-us-yellow.png">
+                           </a>
+                        </div>
+                        <div class="back-to-top">
+                           <a href="#">
+                           <img class="d-none d-md-block" src="assets/images/footer/back-to-top.svg">
+                           <img class="d-block d-md-none" src="assets/images/footer/back-to-top.png">
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer-bottom">
+               <div class="row">
+                  <div class="col-md-3 col-12 d-block d-md-none">
+                     <div class="map-bx">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.785463488901!2d77.24266957549987!3d28.606212175679136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce318a027dbb9%3A0xf12a1c6b59580448!2sNational%20Zoological%20Park%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1740293430000!5m2!1sen!2sin" width="100%" height="175" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                  </div>
+                  <div class="col-md-2 col-4 align-content-center">
+                     <ul class="useful-links">
+                        <li><a href="#">Notice &amp; Tenders</a></li>
+                        <li><a href="#">Vacancies</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Help</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-2 col-4 align-content-center">
+                     <ul class="useful-links">
+                        <li><a href="#">Website Policy</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Copyright Policy</a></li>
+                        <li><a href="#">R.T.I</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-2 col-4 align-content-center">
+                     <ul class="useful-links">
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Archive</a></li>
+                        <li><a href="#">Publication</a></li>
+                        <li><a href="#">Map</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-3 col-12 d-none d-md-block">
+                     <div class="map-bx">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.785463488901!2d77.24266957549987!3d28.606212175679136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce318a027dbb9%3A0xf12a1c6b59580448!2sNational%20Zoological%20Park%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1740293430000!5m2!1sen!2sin" width="100%" height="175" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                  </div>
+                  <div class="col-md-3 align-content-center">
+                     <div class="text-end">
+                        <div class="white-logos">
+                           <img src="assets/images/footer/white-logo-1.svg">
+                           <div class="vertical-line"></div>
+                           <img src="assets/images/footer/white-logo-2.svg">
+                        </div>
+                        <ul class="social-icons">
+                           <li><a href="#"><img src="assets/images/footer/instagram.svg"></a></li>
+                           <li><a href="#"><img src="assets/images/footer/facebook.svg"></a></li>
+                           <li><a href="#"><img src="assets/images/footer/x.svg"></a></li>
+                           <li><a href="#"><img src="assets/images/footer/youtube.svg"></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright-bx">
+               <div class="row">
+                  <div class="col-md-6 col-12">
+                     <div class="copyright-text"><span>Hosted by NIC, NICSI.</span> Designed and Maintained by <a href="#">Conceptz and Beyond</a></div>
+                  </div>
+                  <div class="col-md-6 col-12 ">
+                     <div class="designed-by"><span>Copyright © 2025</span> Content Owned by <a href="#">National Zoological Park</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <div class="bottom-footer d-block d-md-none">
+         <div class="row">
+            <div class="col-3">
+               <div class="bottom-menu"><a href="#"><img src="assets/images/sliders/home/adopt.svg"></a></div>
+            </div>
+            <div class="col-3">
+               <div class="bottom-menu"><a href="partner-with-us.html"><img src="assets/images/sliders/home/partner.png"></a></div>
+            </div>
+            <div class="col-3">
+               <div class="bottom-menu"><a href="#"><img src="assets/images/sliders/home/live.png"></a></div>
+            </div>
+            <div class="col-3">
+               <div class="bottom-menu"><a href="events.html"><img src="assets/images/sliders/home/zoo-events.svg"></a></div>
+            </div>
+         </div>
+      </div>
+      <!-- jQuery -->
+      <script src="assets/plugins/jquery/jquery-3.6.0.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+	  <!-- Slick Slider JS -->
+      <script type="text/javascript" src="assets/plugins/slick-carousel/slick.min.js"></script>
+	  <!-- Custom JS -->
+      <script type="text/javascript" src="assets/js/custom.js"></script>
+      <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+      <script src="assets/js/masonry.pkgd.min.js"></script>
+   </body>
+</html>
