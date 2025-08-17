@@ -11,8 +11,8 @@
       this.initCarouselVertical();
       this.initLightboxGallery();
       this.initContactFormValidation();
-	  this.initSubscribeFormValidation();
-	  this.initTextToggle();
+  	  this.initSubscribeFormValidation();
+  	  this.initTextToggle();
     },
 
     // ========== Variables ==========
