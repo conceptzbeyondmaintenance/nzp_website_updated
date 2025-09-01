@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="" />
+    <meta name="author" content="">
+    <meta name="robots" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Zoological Park</title>
+    <link rel="shortcut icon" href="assets/images/header/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/slick-carousel/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/plugins/slick-carousel/slick-theme.css"/>
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <!-- jQuery -->
+    <script src="assets/plugins/jquery/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script type="text/javascript" src="assets/plugins/slick-carousel/slick.min.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+
+    <style>
+        /* Feedback Section */
+        .feedback-section {
+            background-color: #fff7ee;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .feedback-section h4 {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .feedback-label {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #3c3c3c;
+        }
+
+        /* Star Rating */
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            font-size: 26px;
+            color: #e0e0e0;
+            transition: color 0.3s ease;
+        }
+
+        .star.selected,
+        .star.hovered {
+            color: #f97316; /* Orange shade like screenshot */
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contac-form">
+                        <h3>Feedback <img src="assets/images/contact/angle.png"></h3>
+                        <form action="" id="contactForm">
+                            <!-- Name -->
+                            <div class="mb-4">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                <span id="feedback-name" class="error-message"></span>
+                            </div>
+                            <!-- Phone -->
+                            <div class="mb-4">
+                                <input type="number" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+                                <span id="feedback-phone" class="error-message"></span>
+                            </div>
+                            <!-- Email -->
+                            <div class="mb-4">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                                <span id="feedback-email" class="error-message"></span>
+                            </div>
+                            <!-- Message -->
+                            <div class="mb-4">
+                                <textarea class="form-control" id="message" name="message" placeholder="Message" rows="4"></textarea>
+                                <span id="feedback-message" class="error-message"></span>
+                            </div>
+
+                            <!-- Feedback Ratings -->
+                            <div class="feedback-section">
+                                <h4>Feedback Category <span style="color:red">*</span></h4>
+                                <div class="row text-center">
+                                    <div class="col-md-4 mb-3">
+                                        <p class="feedback-label">Ticketing</p>
+                                        <div class="star-rating" data-category="ticketing"></div>
+                                        <input type="hidden" name="ticketing" id="ticketing-rating">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <p class="feedback-label">Drinking Water</p>
+                                        <div class="star-rating" data-category="drinking-water"></div>
+                                        <input type="hidden" name="drinking_water" id="drinking-water-rating">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <p class="feedback-label">Rest Sheds / Sitting Benches</p>
+                                        <div class="star-rating" data-category="rest-sheds"></div>
+                                        <input type="hidden" name="rest_sheds" id="rest-sheds-rating">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <p class="feedback-label">Signage</p>
+                                        <div class="star-rating" data-category="signage"></div>
+                                        <input type="hidden" name="signage" id="signage-rating">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <p class="feedback-label">Cleanliness & Toilets</p>
+                                        <div class="star-rating" data-category="cleanliness"></div>
+                                        <input type="hidden" name="cleanliness" id="cleanliness-rating">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <p class="feedback-label">Overall Zoo Experience</p>
+                                        <div class="star-rating" data-category="overall-experience"></div>
+                                        <input type="hidden" name="overall_experience" id="overall-experience-rating">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Captcha -->
+                            <div class="verify-contact">
+                                <div class="verify-code">weSHsh3</div>
+                                <div class="code-refresh"><img src="assets/images/contact/refresh.png"></div>
+                                <div class="answer-input">
+                                    <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter Image Value">
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="ticket-icon" class="ticket-icon"><img src="assets/images/sliders/home/book-tickets.svg"></div>
+    <div class="chat-icon"><img src="assets/images/sliders/home/chat.svg"></div>
+    <div id="footer"></div>
+
+    <script>
+        // Load Header & Footer
+        fetch("header.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            })
+            .catch(err => console.error("Failed to load page:", err));
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            })
+            .catch(err => console.error("Failed to load page:", err));
+
+        // Star Rating Logic
+        document.addEventListener("DOMContentLoaded", function () {
+            const categories = document.querySelectorAll(".star-rating");
+
+            categories.forEach(category => {
+                for (let i = 1; i <= 5; i++) {
+                    const star = document.createElement("span");
+                    star.classList.add("star");
+                    star.innerHTML = "★";
+                    star.dataset.value = i;
+
+                    // Hover Effect
+                    star.addEventListener("mouseover", () => {
+                        const allStars = star.parentElement.querySelectorAll(".star");
+                        allStars.forEach((s, idx) => {
+                            s.classList.toggle("hovered", idx < i);
+                        });
+                    });
+
+                    // Remove hover effect
+                    star.addEventListener("mouseout", () => {
+                        star.parentElement.querySelectorAll(".star").forEach(s => s.classList.remove("hovered"));
+                    });
+
+                    // Click Event
+                    star.addEventListener("click", () => {
+                        const allStars = star.parentElement.querySelectorAll(".star");
+                        allStars.forEach((s, idx) => {
+                            s.classList.toggle("selected", idx < i);
+                        });
+
+                        // Update hidden input field
+                        const categoryName = category.dataset.category;
+                        document.getElementById(`${categoryName}-rating`).value = i;
+                    });
+
+                    category.appendChild(star);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

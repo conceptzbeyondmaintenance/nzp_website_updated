@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="" />
+    <meta name="author" content="">
+    <meta name="robots" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Zoological Park</title>
+    <link rel="shortcut icon" href="assets/images/header/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/slick-carousel/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/plugins/slick-carousel/slick-theme.css"/>
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <!-- jQuery -->
+    <script src="assets/plugins/jquery/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script type="text/javascript" src="assets/plugins/slick-carousel/slick.min.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contac-form">
+                        <h3>Lodge Grievance <img src="assets/images/contact/angle.png"></h3>
+                        <form action="" id="contactForm">
+                            <!-- Name -->
+                            <div class="mb-4">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                <span id="feedback-name" class="error-message"></span>
+                            </div>
+                            <!-- Phone -->
+                            <div class="mb-4">
+                                <input type="number" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+                                <span id="feedback-phone" class="error-message"></span>
+                            </div>
+                            <!-- Email -->
+                            <div class="mb-4">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                                <span id="feedback-email" class="error-message"></span>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Write your subject" rows="4"></input>
+                                <span id="feedback-subject" class="error-message"></span>
+                            </div>
+                            <!-- Message -->
+                            <div class="mb-4">
+                                <textarea class="form-control" id="message" name="message" placeholder="Write your complaint" rows="4"></textarea>
+                                <span id="feedback-message" class="error-message"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <input type="file" id="file" name="file" placeholder="Upload the file" rows="4"/>
+                                <span id="feedback-message" class="error-message"></span>
+                            </div>
+
+                            <!-- Captcha -->
+                            <div class="verify-contact">
+                                <div class="verify-code">weSHsh3</div>
+                                <div class="code-refresh"><img src="assets/images/contact/refresh.png"></div>
+                                <div class="answer-input">
+                                    <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter Image Value">
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="ticket-icon" class="ticket-icon"><img src="assets/images/sliders/home/book-tickets.svg"></div>
+    <div class="chat-icon"><img src="assets/images/sliders/home/chat.svg"></div>
+    <div id="footer"></div>
+
+    <script>
+        // Load Header & Footer
+        fetch("header.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            })
+            .catch(err => console.error("Failed to load page:", err));
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            })
+            .catch(err => console.error("Failed to load page:", err));
+
+        
+    </script>
+</body>
+</html>
+
+As per the screenshot could you add the two buttons to it 
+and an option upload file to it

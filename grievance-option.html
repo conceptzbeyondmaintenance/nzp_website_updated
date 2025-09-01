@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="" />
+    <meta name="author" content="">
+    <meta name="robots" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Zoological Park</title>
+    <link rel="shortcut icon" href="assets/images/header/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/slick-carousel/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/plugins/slick-carousel/slick-theme.css"/>
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <!-- jQuery -->
+    <script src="assets/plugins/jquery/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script type="text/javascript" src="assets/plugins/slick-carousel/slick.min.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact-">
+                        <h1 class="heading text-center">GRIEVANCE</h1>
+                        <div class="separate-line margin-40"><img src="assets/images/home/separator.png"></div>
+                        <div class="row mt-4" >
+                            <div class="col-md-6">
+                                <a href="grievance.html" class="grievance-btn px-5 py-3 text-center" style="border-radius: 20px;">Lodge Grievance</a>
+                            </div>
+                             <div class="col-md-6">
+                               <a href="grievance-status.html" class="grievance-btn px-5 py-3 text-center" style="border-radius: 20px;">Status</a>
+                            </div>
+                        </div>
+                        <div class="separate-line margin-40"><img src="assets/images/home/separator.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="ticket-icon" class="ticket-icon"><img src="assets/images/sliders/home/book-tickets.svg"></div>
+    <div class="chat-icon"><img src="assets/images/sliders/home/chat.svg"></div>
+    <div id="footer"></div>
+
+    <script>
+        // Load Header & Footer
+        fetch("header.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            })
+            .catch(err => console.error("Failed to load page:", err));
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            })
+            .catch(err => console.error("Failed to load page:", err));
+
+        
+    </script>
+</body>
+</html>
+
+As per the screenshot could you add the two buttons to it 
+and an option upload file to it

@@ -214,7 +214,6 @@
     const name = form.name.value.trim();
     const phone = form.phone.value.trim();
     const email = form.email.value.trim();
-    const address = form.address.value.trim();
     const message = form.message.value.trim();
     const answer = form.answer.value.trim();
 
@@ -233,16 +232,13 @@
     }
 
     // Email validation
-    if (email === "") {
-      setError("feedback-email", "Please enter your email.");
-    } else if (!/^\S+@\S+\.\S+$/.test(email)) {
-      setError("feedback-email", "Please enter a valid email.");
-    }
+    // if (email === "") {
+    //   setError("feedback-email", "Please enter your email.");
+    // } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+    //   setError("feedback-email", "Please enter a valid email.");
+    // }
 
-    // Address validation
-    if (address === "") {
-      setError("feedback-address", "This field is required.");
-    }
+  
 
     // Message validation
     if (message === "") {
