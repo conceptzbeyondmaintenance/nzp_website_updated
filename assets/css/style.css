@@ -1463,6 +1463,11 @@ textarea.form-control {
 	line-height: 1;
 }
 
+.contact-item a img {
+	height: 32px;
+	margin-right: 5px;
+}
+
 .map-box {
 	padding-right: 50px;
 	margin-top: 50px;
